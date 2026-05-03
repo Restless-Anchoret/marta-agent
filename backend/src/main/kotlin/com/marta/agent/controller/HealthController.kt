@@ -1,4 +1,4 @@
-package com.marta.agent
+package com.marta.agent.controller
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
