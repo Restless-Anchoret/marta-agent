@@ -34,6 +34,5 @@ The intended data flow is: `MessageController` → `AgentService` → `ClaudeCli
 
 ## Key technical constraints
 
-- Kotlin 2.2.0 targets JVM 24 bytecode (not 25 — Kotlin doesn't support JVM 25 yet). Java toolchain is set to 25 but `jvmTarget = JVM_24` and `options.release = 24` override the bytecode target.
 - Dependency versions are extracted to `val` variables at the top of `build.gradle.kts`. Plugin versions inside the `plugins {}` block must stay as string literals (Gradle constraint).
 - Use `@param:Value(...)` (not bare `@Value`) for Spring `@Value` annotations on constructor parameters — required to avoid a Kotlin compiler warning about annotation target ambiguity.
